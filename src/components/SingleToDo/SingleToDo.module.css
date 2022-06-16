@@ -1,0 +1,166 @@
+.todoItem.editing .view {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.todoItem.completed label {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
+.todoItem .destroy {
+  visibility: hidden;
+  font-size: 30px;
+  color: #cc9a9a;
+  margin: 10px;
+  transition: color 0.2s ease-out;
+}
+
+.todoItem .destroy:hover {
+  color: #af5b5e;
+  cursor: pointer;
+}
+
+.todoItem .destroy:after {
+  content: "×";
+}
+
+.todoItem:hover .destroy {
+  visibility: visible;
+}
+
+.todoItem .edit,
+.todoItem .edit:focus-visible {
+  flex: 1;
+  border: 0;
+  /* background: #eee; */
+  font-size: 22px;
+  padding: 13px;
+  border: 1px solid #888;
+}
+
+.todoItem.editing:last-child {
+  margin-bottom: -1px;
+}
+
+.todoItem .toggle {
+  text-align: center;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.todoItem .toggle:after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+}
+
+.todoItem .toggle:checked:after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+
+.todoItem label {
+  flex: 1;
+  white-space: pre-line;
+  word-break: break-all;
+  display: block;
+  line-height: 1.2;
+  transition: color 0.4s;
+  margin-bottom: 6px;
+}
+
+.todoItem {
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px solid #ededed;
+}
+
+.todoItem:last-child {
+  border-bottom: none;
+}
+
+.todoItem.checked {
+  color: #979797;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.todoItem .itemList {
+  text-align: center;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.todoItem label {
+  white-space: pre-line;
+  word-break: break-all;
+  display: block;
+  transition: color 0.4s;
+}
+
+.todoItem input[type="checkbox"] {
+  cursor: pointer;
+  visibility: hidden;
+  margin: 10px;
+}
+
+.todoItem:hover input[type="checkbox"]:after {
+  visibility: visible;
+}
+
+.todoItem input[type="checkbox"]:after {
+  border: 1px solid #166b94;
+  border-radius: 3px;
+  color: #fff;
+  content: "";
+  display: block;
+  height: 30px;
+  text-align: center;
+  visibility: hidden;
+  width: 30px;
+}
+
+.todoItem input[type="checkbox"]:checked:after {
+  border: 1px solid #979797;
+  color: #979797;
+  content: "✓";
+  font-size: 21px;
+  color: green;
+}
+
+.todoItem input[type="checkbox"]:checked + label {
+  color: #979797;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.todoItem .remove {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  font-size: 30px;
+  color: #cc9a9a;
+  margin-bottom: 11px;
+  transition: color 0.2s ease-out;
+  cursor: pointer;
+}
+
+.todoItem .remove:hover {
+  color: #af5b5e;
+}
+
+.todoItem .remove:after {
+  content: "×";
+}
+
+.todoItem:hover .remove {
+  display: block;
+}

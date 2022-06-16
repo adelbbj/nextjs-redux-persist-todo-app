@@ -1,0 +1,37 @@
+.header h1 {
+  position: absolute;
+  top: -120px;
+  width: 100%;
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+  color: #dbdbdb;
+  text-shadow: -1px -1px 1px rgb(0 0 0 / 20%);
+}
+
+.newTodo {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  font-size: 24px;
+  outline: none;
+  box-sizing: border-box;
+  padding: 16px 16px 16px 60px;
+  border: none;
+  background: #fafafa;
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+}
+
+.newTodo::placeholder {
+  font-style: italic;
+}
+
+.headerBar {
+  height: 15px;
+  border-bottom: 1px solid #6a5f5a;
+  background: #9c8b83;
+  background: -webkit-linear-gradient(top, #9c8b83, #857771);
+  background: -moz-linear-gradient(top, #9c8b83, #857771);
+  background: linear-gradient(to bottom, #9c8b83, #857771);
+}
